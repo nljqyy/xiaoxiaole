@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: Main.png (1024 x 1024)
+# $TexturePacker:SmartUpdate:cd6fc045553f24fea57a9ba947e68676:e806f7d62dfa9d55bfa65f209378273b:a51e1c733bd95c2344351166cb293d60$
+#
+
+Biscuit;191;257;202;194;0.5;0.5
+BiscuitSpiral;2;55;202;194;0.5;0.5
+Blue;2;726;300;296;0.5;0.5
+Colors;304;495;250;255;0.5;0.5
+Green;606;568;272;214;0.5;0.5
+Pink;2;453;240;271;0.5;0.5
+Purple;304;752;300;270;0.5;0.5
+Red;2;251;187;200;0.5;0.5
+Yellow;606;784;283;238;0.5;0.5
