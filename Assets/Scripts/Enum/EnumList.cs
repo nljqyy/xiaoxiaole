@@ -15,8 +15,8 @@ public enum UIShowPos
 
 public enum HidePage
 {
-  Hide,
-  Destory
+    Hide,
+    Destory
 }
 
 
@@ -35,7 +35,7 @@ public enum EventHandlerType
     TakeAway,
     QRCodeSuccess,
 }
- 
+
 /// <summary>
 /// 动画片段名称
 /// </summary>
@@ -46,7 +46,7 @@ public enum AnimationName
     fishhook_get,
     fishhook_letgo,
 }
- 
+
 /// <summary>
 /// 协程类型
 /// </summary>
@@ -56,7 +56,7 @@ public enum IeType
     Time,//倒计时
 }
 
- 
+
 
 public enum AudioNams
 {
@@ -67,6 +67,7 @@ public enum AudioNams
 
 public enum FoodType
 {
+    None,
     Blue,
     Colors,
     Green,
@@ -74,6 +75,14 @@ public enum FoodType
     Purple,
     Red,
     Yellow,
+}
+public enum Dir
+{
+    None,
+    Up,
+    Down,
+    Left,
+    Right
 }
 
 

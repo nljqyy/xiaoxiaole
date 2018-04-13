@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class UIAtlasName
 {
-    public const string UIMain = "UIMain";
-    public const string UIQRCode = "UIQRCode";
-
+    public const string UIMain = "Main";
+     
 
 
 

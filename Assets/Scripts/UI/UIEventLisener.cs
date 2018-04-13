@@ -11,6 +11,7 @@ public class UIEventLisener : EventTrigger
     public event OnClickDelgate OnClick;
     public event OnClickDelgate OnPress;
     public event OnClickDelgate OnUp;
+    public event OnClickDelgate OnDown;
     public event OnClickDelgate OnEnter;
     public event OnClickDelgate OnExit;
 
@@ -34,12 +35,14 @@ public class UIEventLisener : EventTrigger
     }
     public override void OnPointerDown(PointerEventData eventData)
     {
-
+        if (OnDown != null)
+            OnDown(eventData.pointerCurrentRaycast.gameObject);
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-
+        if (OnUp != null)
+            OnUp(eventData.pointerCurrentRaycast.gameObject);
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
