@@ -60,9 +60,10 @@ public sealed class LogicMrg
             temp = GameObject.Instantiate<GameObject>(modefood);
             temp.transform.SetParent(parentfood.transform);
             temp.transform.localScale = Vector3.one;
-             if(i==0) temp1 = temp.GetComponent<Image>();
-             else
-                //temp1 = temp.GetComponent<Image>();
+            temp.SetActive(false);
+            if (i == 0) temp1 = temp.GetComponent<Image>();
+            else
+                temp2 = temp.GetComponent<Image>();
         }
         for (int i = 0; i < 6; i++)
         {
@@ -77,17 +78,31 @@ public sealed class LogicMrg
                 temp.name = i + "|" + j;
                 img = temp.GetComponent<Image>();
                 img.gameObject.SetActive(false);
-                last = j == 0 ? null : nums[i, j - 1];
-                next = j == 5 ? null : nums[i, j + 1];
-                left = i == 0 ? null : nums[i - 1, j];
-                right = i == 5 ? null : nums[i + 1, j];
-                food = new Food(last, next, left, right, img, i, j, x, y);
-                UIEventLisener.Get(temp).OnUp += food.PointerUp;
+                food = new Food();
                 nums[i, j] = food;
+                food.temp1 = temp1;
+                food.temp2 = temp2;
+                food.self = temp;
+                food.img = temp.GetComponent<Image>();
+                food.x_index = i;
+                food.y_index = j;
+                food.x_pos = x;
+                food.y_pos = y;
+                food.RandomSprite();
+                UIEventLisener.Get(temp).OnUp += food.PointerUp;
             }
         }
 
-
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 6; j++)
+            {
+                nums[i,j].last = j == 0 ? null : nums[i, j - 1];
+                nums[i, j].next = j == 5 ? null : nums[i, j + 1];
+                nums[i, j].left = i == 0 ? null : nums[i - 1, j];
+                nums[i, j].right = i == 5 ? null : nums[i + 1, j];
+            }
+        }
     }
 
     private void StarMove()

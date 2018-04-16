@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 /// <summary>
 /// ui面板位置
@@ -76,13 +77,14 @@ public enum FoodType
     Red,
     Yellow,
 }
+[Flags]
 public enum Dir
 {
-    None,
-    Up,
-    Down,
-    Left,
-    Right
+    None = 0,
+    Up = 1,
+    Down = 2,
+    Left = 4,
+    Right = 8,
 }
 
 
